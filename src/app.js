@@ -4,4 +4,4 @@
 
 import $ from 'jquery';
 
-console.log($('#root'));
+$('#root').html(require('./demo.html'))

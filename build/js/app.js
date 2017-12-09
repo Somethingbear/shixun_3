@@ -65,19 +65,20 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/**
- * Created by Rayr Lee on 2017/12/9.
- */
 
 
+var _jquery = __webpack_require__(1);
 
-console.log(__WEBPACK_IMPORTED_MODULE_0_jquery___default()('#root'));
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _jquery2.default)('#root').html(__webpack_require__(2)); /**
+                                                              * Created by Rayr Lee on 2017/12/9.
+                                                              */
 
 /***/ }),
 /* 1 */
@@ -10338,6 +10339,12 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = "<h1>老黑</h1>";
 
 /***/ })
 /******/ ]);
