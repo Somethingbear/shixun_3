@@ -77,7 +77,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-console.log(__WEBPACK_IMPORTED_MODULE_0_jquery___default.a);
+console.log(__WEBPACK_IMPORTED_MODULE_0_jquery___default()('#root'));
 
 /***/ }),
 /* 1 */
