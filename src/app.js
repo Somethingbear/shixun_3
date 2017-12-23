@@ -2,7 +2,7 @@
  * Created by Rayr Lee on 2017/12/9.
  */
 
-import './app.scss';
+import './scss/index.scss';
 
 import $ from 'jquery';
 
