@@ -12,7 +12,8 @@ module.exports = {
     entry: entry,
     output: {
         path: path.resolve(__dirname, '../dev'),
-        filename: 'js/[name].js'
+        filename: 'js/[name].js',
+        publicPath: '/'
     },
     watch: true,
     module: {

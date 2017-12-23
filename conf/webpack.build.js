@@ -12,7 +12,8 @@ module.exports = {
     entry: entry,
     output: {
         path: path.resolve(__dirname, '../build'),
-        filename: 'js/[name].[chunkhash:6].js'
+        filename: 'js/[name].[chunkhash:6].js',
+        publicPath: '/'
     },
     module: {
         rules: rules

@@ -30,7 +30,7 @@ module.exports = [
         })
     },
     {
-        test: /\.scss/,
+        test: /\.scss$/,
         use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: [
@@ -42,5 +42,29 @@ module.exports = [
                 }
             ]
         })
+    },
+    {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+            {
+                loader: 'url-loader',
+                options: {
+                    limit: 8192,
+                    name: 'img/[name].[hash:6].[ext]'
+                }
+            }
+        ]
+    },
+    {
+        test: /\.(woff|eot|ttf|woff2)$/,
+        use: [
+            {
+                loader: 'url-loader',
+                options: {
+                    limit: 8192,
+                    name: 'fonts/[name].[hash:6].[ext]'
+                }
+            }
+        ]
     }
 ]
