@@ -9,4 +9,11 @@ module.exports = function (gulp, $) {
             port: 9000
         });
     });
+
+    gulp.task('server:dev', () => {
+        $.connect.server({
+            root: './dev/',
+            port: 9000
+        });
+    });
 }
