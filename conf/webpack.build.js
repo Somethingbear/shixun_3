@@ -11,20 +11,19 @@ const path = require('path'),
 module.exports = {
     entry: entry,
     output: {
-        path: path.resolve(__dirname, '../dev'),
-        filename: 'js/[name].js'
+        path: path.resolve(__dirname, '../build'),
+        filename: 'js/[name].[chunkhash:6].js'
     },
-    watch: true,
     module: {
         rules: rules
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: 'css/styles.css'
+            filename: 'css/styles.[chunkhash:6].css'
         }),
         new HtmlWebapckPlugin({
             template: './index.html',
-            filename: path.resolve(__dirname, '../dev/index.html'),
+            filename: path.resolve(__dirname, '../build/index.html'),
             inject: 'body'
         })
     ]

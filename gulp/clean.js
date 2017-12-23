@@ -2,14 +2,9 @@
  * Created by Rayr Lee on 2017/12/23.
  */
 
-module.exports = function (gulp, $) {
-    gulp.task('clean:dev', () => {
-        return gulp.src('./dev')
-            .pipe($.clean())
-    });
-
-    gulp.task('clean:build', () => {
-        return gulp.src('./build')
+module.exports = function (gulp, $, NODE_ENV) {
+    gulp.task(`clean:${NODE_ENV}`, () => {
+        return gulp.src(`./${NODE_ENV}`)
             .pipe($.clean())
     });
 }
