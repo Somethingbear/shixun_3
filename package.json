@@ -4,7 +4,8 @@
   "description": "1、互动，多问，不会没关系，一定要多问，在群里问，描述清楚你的问题",
   "main": "app.js",
   "scripts": {
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
