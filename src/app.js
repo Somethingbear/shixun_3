@@ -7,45 +7,24 @@ import './scss/index.scss';
 import 'babel-polyfill';
 import React from 'react';
 import {render} from 'react-dom';
+import {Provider} from 'react-redux';
 
-import {
-    HashRouter as Router,
-    Route,
-} from 'react-router-dom';
+import {HashRouter as Router, Route} from 'react-router-dom';
 
-function About() {
-    return (<h2> About </h2>)
-}
+import configureStore from './store';
 
-class Home extends React.Component {
+import Home from './pages/home';
+import About from './pages/about';
 
-    constructor() {
-        super()
-
-        this.state = {
-            num: 10
-        }
-    }
-
-
-    render() {
-        return [
-            <h1>Home {this.state.num}</h1>,
-            <button onClick={() => {
-                this.setState({
-                    num: this.state.num + 10
-                });
-
-            }}>按钮</button>
-        ]
-    }
-}
+const store = configureStore(JSON.parse(window.localStorage.getItem('test')));
 
 render(
-    <Router>
-        <div>
-            <Route path="/" component={Home}/>
-            <Route path="/about" component={About}/>
-        </div>
-    </Router>, document.getElementById('shixun')
+    <Provider store={store}>
+        <Router>
+            <div>
+                <Route path="/" component={Home}/>
+                <Route path="/about" component={About}/>
+            </div>
+        </Router>
+    </Provider>, document.getElementById('shixun')
 );
