@@ -18,7 +18,17 @@ module.exports = {
     module: {
         rules: rules
     },
+    resolve: {
+        alias: require('./alias')
+    },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            names: ['app', 'base', 'optimizded']
+        }),
         new ExtractTextPlugin({
             filename: 'css/styles.[chunkhash:6].css'
         }),

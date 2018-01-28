@@ -3,6 +3,7 @@
  */
 
 const path = require('path'),
+    webpack = require('webpack'),
     HtmlWebapckPlugin = require('html-webpack-plugin'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
     entry = require('./entry'),
@@ -17,9 +18,19 @@ module.exports = {
     },
     watch: true,
     module: {
-        rules: rules
+        rules: require('./rules')
+    },
+    resolve: {
+        alias: require('./alias')
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            names: ['app', 'base', 'optimizded']
+        }),
         new ExtractTextPlugin({
             filename: 'css/styles.css'
         }),

@@ -1,5 +1,5 @@
 /**
- * Created by Rayr Lee on 2018/1/21.
+ * Created by Rayr Lee on 2018/1/28.
  */
 
 import React, {Component} from 'react';
@@ -23,7 +23,7 @@ export default class extends Component {
 
     render() {
         return [
-            <h1 key={'h1'}>HOME</h1>
+            <h1 key={'h1'}>Login</h1>
         ]
     }
 }

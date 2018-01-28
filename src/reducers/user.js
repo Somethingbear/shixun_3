@@ -4,7 +4,7 @@
 
 import {MAIN_USER} from '../constants';
 
-export default function (state = {}, action) {
+export default function (state = {name: ''}, action) {
     switch (action.type) {
         case MAIN_USER:
             return action.res;

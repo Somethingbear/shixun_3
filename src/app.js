@@ -12,19 +12,12 @@ import {Provider} from 'react-redux';
 import {HashRouter as Router, Route} from 'react-router-dom';
 
 import configureStore from './store';
+import Pages from './pages';
 
-import Home from './pages/home';
-import About from './pages/about';
-
-const store = configureStore(JSON.parse(window.localStorage.getItem('test')));
+const store = configureStore();
 
 render(
     <Provider store={store}>
-        <Router>
-            <div>
-                <Route path="/" component={Home}/>
-                <Route path="/about" component={About}/>
-            </div>
-        </Router>
+        <Router><Pages/></Router>
     </Provider>, document.getElementById('shixun')
 );

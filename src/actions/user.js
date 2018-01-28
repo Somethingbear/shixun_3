@@ -4,11 +4,9 @@
 
 import {MAIN_USER} from '../constants';
 
-export default function () {
+export default function (res = {}) {
     return {
         type: MAIN_USER,
-        res: {
-            name: 'laohei'
-        }
+        res: res
     }
 }
