@@ -10,9 +10,8 @@ export default class extends React.Component {
             <aside className="main-sidebar">
                 <section className="sidebar">
                     <ul className="sidebar-menu tree" data-widget="tree">
-                        <li><a href="#"><i className="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-                        <li><a href="#"><i className="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-                        <li><a href="#"><i className="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+                        <li><a href="#"><i className="fa fa-circle-o text-red"></i> <span>工作面板</span></a></li>
+                        <li><a href="#"><i className="fa fa-circle-o text-yellow"></i> <span>用户管理</span></a></li>
                     </ul>
                 </section>
             </aside>

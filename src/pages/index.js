@@ -6,7 +6,7 @@ import React from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
 
 import Login from './Login';
-import App from './app/app';
+import App from './app';
 
 export default class extends React.Component {
     render() {
