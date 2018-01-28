@@ -2,7 +2,7 @@
  * Created by Rayr Lee on 2018/1/21.
  */
 
-import {MAIN_MENU} from '../constants';
+import {MAIN_MENU} from '../conf/constants';
 
 export default function (state = {}, action) {
     switch (action.type) {
